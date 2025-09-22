@@ -1,7 +1,7 @@
 import express from "express";
 import cookieParser from "cookie-parser";
 
-import { ARCJET_ENV, PORT } from "./config/env.js";
+import { PORT } from "./config/env.js";
 
 import authRouter from "./routes/auth.routes.js";
 import subscriptionRouter from "./routes/subscription.routes.js";
@@ -26,7 +26,7 @@ app.use('/api/v1/workflows', workflowRouter);
 app.use(errorMiddleware);
 
 app.get('/', (req, res) => {
-  res.send("Hello World")
+  res.send("Subscription Tracker API")
 })
 
 app.listen(PORT, async () => {
